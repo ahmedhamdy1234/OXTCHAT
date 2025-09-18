@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+/* Custom scrollbar for chat area */
+.custom-scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #9ca3af #e5e7eb; /* thumb and track color for Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e5e7eb; /* Light gray for track */
+  @apply dark:bg-gray-800;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #9ca3af; /* Gray for thumb */
+  @apply dark:bg-gray-600;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb; /* Padding around thumb */
+  @apply dark:border-gray-800;
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* Apply bounce animation with delays */
+.animate-bounce-delay-0 {
+  animation: bounce 1s infinite;
+}
+
+.animate-bounce-delay-100 {
+  animation: bounce 1s infinite 0.1s;
+}
+
+.animate-bounce-delay-200 {
+  animation: bounce 1s infinite 0.2s;
+}
