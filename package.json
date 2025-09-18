@@ -4,7 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix vite:build",
+    "build": "tsc && remix vite:build",
     "dev": "remix vite:dev",
     "lint": "eslint .",
     "start": "remix-serve ./build/index.js",
@@ -21,7 +21,7 @@
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^2.17.1",
+    "@remix-run/dev": "^2.9.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
